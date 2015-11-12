@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>My website title</title>
+	<title>Bigapple website</title>
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0,width=device-width" />
+	<link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 	<style>
 		/* Global styles */
 		.clear {
@@ -11,10 +14,14 @@
 		}
 		a {
 			text-decoration: none;
+			color: #4a821f;
 		}
 		/* body style */
 		body { 
 			background: url(background-image.gif) repeat-x; 
+			color: #575757;
+			font-size: 14px;
+			line-height: 21px;
 		}
 		/* frame setup */
 		#frame { 
@@ -56,6 +63,125 @@
 		#menu li a:hover {
 			color: #79b14d;
 		}
+		/* Article content */
+		article a {
+			text-decoration: underline;
+		}
+		article a:hover {
+			color: #79b14d;
+			text-decoration: none;
+		}
+
+		h1, h2, h3, h4, h5 {
+			margin: 10px 0 0 0;
+			line-height: normal;
+		}
+		h1 {
+			font-family: 'League Script', cursive;
+			font-size: 72px;
+			color: #6aac35;
+			font-weight: 400;
+		}
+		h2, h3, h4, h5 {
+			font-family: 'Shadows Into Light', cursive;
+		}
+		table {
+			width: 100%;
+		}
+		table tr th {
+			background: #79b14d;
+			text-align: left;
+			color: #fff;
+			padding: 5px 10px;
+		}
+		table tr th a {
+			color: #fff;
+		}
+		table tr th a:hover {
+			color: #fff;
+		}
+		table tr td {
+			padding: 5px 10px;
+		}
+		table tr:nth-child(odd) td {
+			background: #f2f2f2;
+		}
+		table tr:nth-child(even) td {
+			background: #fff;
+		}
+		/**** Responsive ****/
+		/* media queries */
+		@media all and (max-width: 980px) and (min-width: 480px) {
+			#frame {
+				width: 100%;
+			}
+			iframe {
+				width: 100% !important;
+			}
+			img {
+				width: 100%;
+			}
+			#logo {
+				float: none;
+				margin: auto;
+				display: block;
+				width: 123px;
+				padding: 0;
+			}
+			#menu {
+				float: none;
+				margin-top: 25px;
+				overflow: hidden;
+				display: table;
+				width: 100%;
+				padding: 10px 0;
+			}
+			#menu li {
+				display: table-cell;
+				float: none;
+				text-align: center;
+				padding: 0;
+			}
+		}
+		/* Mobile */
+		@media all and (max-width: 479px){
+			#frame {
+				width: 100%;
+			}
+			#menu {
+				margin: 25px 0 0 0;
+				background: none;
+				border: none;
+				float: none;
+				clear: both;
+				overflow: hidden;
+				font-size: 16px; 
+			}
+			#menu li {
+				float: none;
+				padding: 0;
+				margin: 2px 0;
+				display: block;
+			}
+			#menu li a {
+				display: block;
+				background: #fff;
+				border: solid 1px #d8d8d8;
+				padding: 10px;
+				border-radius: 5px; 
+				text-align: center;
+			}
+			#menu li a:hover {
+				background: #79b14d;
+				color: #fff; 
+			}
+			iframe {
+				width: 100% !important;
+			}
+			img {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -91,8 +217,9 @@
 			<h5>Fifth Level headline</h5>
 			<h6>Sixth Level headline</h6>
 			<!-- Paragraphs and links -->
-			<p>Vivamus vitae diam erat, ut cursus neque. Fusce nibh arcu, ultricies eu mollis vel, vehicula et dui. Duis nec massa massa, a porta ante. Nam consequat tempor congue. Mauris vehicula consequat pharetra. <a href="http://ilm.ee/" target="_blank">link to ilm.ee homsite</a>. Vivamus sapien tellus, imperdiet at hendrerit sit amet, volutpat eget est. Fusce dapibus dolor sem. In eros nulla, laoreet dictum commodo nec, rhoncus eget sapien.</p>
+			<p>Vivamus vitae diam erat, ut cursus neque. <b>Fusce nibh </b>arcu, ultricies eu mollis vel, <i>vehicula et dui</i>. Duis nec massa massa, a porta ante. Nam consequat tempor congue. Mauris vehicula consequat pharetra. <a href="http://ilm.ee/" target="_blank">link to ilm.ee homsite</a>. Vivamus sapien tellus, imperdiet at hendrerit sit amet, volutpat eget est. Fusce dapibus dolor sem. In eros nulla, laoreet dictum commodo nec, rhoncus eget sapien.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, quod, nemo, dolor, maiores voluptatibus vel dolorem eveniet pariatur dolores aspernatur excepturi est sed quibusdam unde.</p>
+			<p><img src="http://ilm.ee/client/failid/galerii101805.jpg" alt=""></p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, harum, culpa vero enim minus fuga velit quam iure saepe maiores ratione perferendis illum labore veniam ad ipsam sequi nam repellendus iusto possimus cupiditate perspiciatis architecto delectus unde consectetur. Adipisci, sequi.</p>
 			<!-- Ordered and unordered list -->
 			<ul>
@@ -204,7 +331,7 @@
 			<p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8235.163475381623!2d23.5415558!3d58.9349322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8adb6075f9469fe1!2sTallinna+%C3%9Clikooli+Haapsalu+kolled%C5%BE!5e0!3m2!1sen!2see!4v1446658135951" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
 		</article>
 		<footer>
-			Footer
+			T-R  10–18 telefon 644 0026 e-post  info@info.ee
 		</footer>
 	</div>
 </body>
