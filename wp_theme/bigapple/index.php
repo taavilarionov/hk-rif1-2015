@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Bigapple website</title>
+	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0,width=device-width" />
 	<link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
@@ -21,8 +21,8 @@
 <body>
 	<div id="frame">
 		<header class="clear">
-			<a href="<?php site_url(); ?>" id="logo">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/logo.png" alt="BigApple logo" title="BigApple logo">
+			<a href="<?php echo home_url(); ?>" id="logo">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/logo.png" alt="<?php bloginfo('name'); ?>" title="B<?php bloginfo('name'); ?>">
 			</a>
 			<div id="menu-trigger" class="mobile">
 				<span></span>
@@ -41,5 +41,6 @@
 			T-R  10–18 telefon 644 0026 e-post  info@info.ee
 		</footer>
 	</div>
+	<?php wp_footer(); ?>
 </body>
 </html>

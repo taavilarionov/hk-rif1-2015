@@ -63,6 +63,10 @@ body {
 #menu li a:hover {
 	color: #79b14d;
 }
+#menu li.current-menu-item a {
+	color: #79b14d;
+}
+
 /*Responsive menu trigger*/
 header {
 	position: relative;
