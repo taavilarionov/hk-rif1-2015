@@ -6,183 +6,17 @@
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0,width=device-width" />
 	<link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-	<style>
-		/* Global styles */
-		.clear {
-			overflow: hidden;
-			clear: both;
-		}
-		a {
-			text-decoration: none;
-			color: #4a821f;
-		}
-		/* body style */
-		body { 
-			background: url(background-image.gif) repeat-x; 
-			color: #575757;
-			font-size: 14px;
-			line-height: 21px;
-		}
-		/* frame setup */
-		#frame { 
-			width: 960px; 
-			margin: auto; 
-		}
-		/* logo */
-		#logo {
-			float: left;
-			padding-right: 70px;
-		}
-		/* menu style */
-		#menu {
-			margin: 70px 0 0 0;
-			padding: 11px;
-			list-style: none;
-			float: left;
-			border: 1px #d8d8d8 solid;
-			border-radius: 20px; 
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+0,ebebeb+100 */
-			background: #f9f9f9; /* Old browsers */
-			background: -moz-linear-gradient(top,  #f9f9f9 0%, #ebebeb 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(top,  #f9f9f9 0%,#ebebeb 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to bottom,  #f9f9f9 0%,#ebebeb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ebebeb',GradientType=0 ); /* IE6-9 */
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+	  $(function() {
+	      $('#menu-trigger').click(function(){
+	       $('#menu').slideToggle("fast");
+	       $('#menu-trigger').toggleClass("active");
+	    });
+    });
+    </script>
 
-		}
-		#menu li {
-			float: left;
-			padding: 0 20px;
-			background: url(joon.png) no-repeat;
-		}
-		#menu li:first-child {
-			background: none;
-		}
-		#menu li a {
-			color: #464648;
-		}
-		#menu li a:hover {
-			color: #79b14d;
-		}
-		/* Article content */
-		article a {
-			text-decoration: underline;
-		}
-		article a:hover {
-			color: #79b14d;
-			text-decoration: none;
-		}
-
-		h1, h2, h3, h4, h5 {
-			margin: 10px 0 0 0;
-			line-height: normal;
-		}
-		h1 {
-			font-family: 'League Script', cursive;
-			font-size: 72px;
-			color: #6aac35;
-			font-weight: 400;
-		}
-		h2, h3, h4, h5 {
-			font-family: 'Shadows Into Light', cursive;
-		}
-		table {
-			width: 100%;
-		}
-		table tr th {
-			background: #79b14d;
-			text-align: left;
-			color: #fff;
-			padding: 5px 10px;
-		}
-		table tr th a {
-			color: #fff;
-		}
-		table tr th a:hover {
-			color: #fff;
-		}
-		table tr td {
-			padding: 5px 10px;
-		}
-		table tr:nth-child(odd) td {
-			background: #f2f2f2;
-		}
-		table tr:nth-child(even) td {
-			background: #fff;
-		}
-		/**** Responsive ****/
-		/* media queries */
-		@media all and (max-width: 980px) and (min-width: 480px) {
-			#frame {
-				width: 100%;
-			}
-			iframe {
-				width: 100% !important;
-			}
-			img {
-				width: 100%;
-			}
-			#logo {
-				float: none;
-				margin: auto;
-				display: block;
-				width: 123px;
-				padding: 0;
-			}
-			#menu {
-				float: none;
-				margin-top: 25px;
-				overflow: hidden;
-				display: table;
-				width: 100%;
-				padding: 10px 0;
-			}
-			#menu li {
-				display: table-cell;
-				float: none;
-				text-align: center;
-				padding: 0;
-			}
-		}
-		/* Mobile */
-		@media all and (max-width: 479px){
-			#frame {
-				width: 100%;
-			}
-			#menu {
-				margin: 25px 0 0 0;
-				background: none;
-				border: none;
-				float: none;
-				clear: both;
-				overflow: hidden;
-				font-size: 16px; 
-			}
-			#menu li {
-				float: none;
-				padding: 0;
-				margin: 2px 0;
-				display: block;
-			}
-			#menu li a {
-				display: block;
-				background: #fff;
-				border: solid 1px #d8d8d8;
-				padding: 10px;
-				border-radius: 5px; 
-				text-align: center;
-			}
-			#menu li a:hover {
-				background: #79b14d;
-				color: #fff; 
-			}
-			iframe {
-				width: 100% !important;
-			}
-			img {
-				width: 100%;
-			}
-		}
-	</style>
 </head>
 <body>
 	<div id="frame">
@@ -190,6 +24,11 @@
 			<a href="#" id="logo">
 				<img src="logo.png" alt="BigApple logo" title="BigApple logo">
 			</a>
+			<div id="menu-trigger" class="mobile">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<ul id="menu">
 				<li>
 					<a href="#">Avaleht</a>
