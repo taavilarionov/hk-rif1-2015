@@ -9,16 +9,19 @@ Wordpressi templiidi aktiveerimine
 3. Aktiveeri valitud templiit klikk "Activate"
 
 Wordpressi lehed
+
 1. Navigeeri Pages -> All pages
 2. Manageeri lehti nende peale klikates
 3. Uue lehe lisamiseks klikk nupule "Add new page"
 4. Peale sisu sisestamist klikk nupule "Update"
 
 Wordpressi menüü muutmine
+
 1. Navigeeri Appearance -> Menus
 2. Lisa/Muuda menüüd
 
 Wordpressi lisade/laienduste(Plugins) manageerimine
+
 1. Navigeeri Plugins
 2. Uue plugina otsimiseks klikk "Add new"
 3. Otsingut kasutades leia sobiv plugin ja klikk "Install now"
