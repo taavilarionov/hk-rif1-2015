@@ -3,6 +3,7 @@ Tere,
 Sellesse reposse on kogutud loengumaterjalid  Haapsalu Kolledzi RIF15 2015(I sem) I kursuse tarbeks.
 
 Wordpressi templiidi aktiveerimine
+
 1. Logi sisse /wp-admin kataloogi
 2. Navigeeri Appearance -> Themes
 3. Aktiveeri valitud templiit klikk "Activate"
